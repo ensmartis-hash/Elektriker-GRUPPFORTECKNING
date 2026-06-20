@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --primary: #0a66c2;
+  --primary-dark: #084c8c;
+  --accent: #f59e0b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #fafafa;
+  --color-foreground: #171717;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  font-family: var(--font-geist-sans);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Nice inputs and buttons for mobile */
+input, select, textarea {
+  font-size: 16px; /* prevent iOS zoom */
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition active:scale-[0.985];
+}
+
+.btn-primary {
+  @apply bg-[#0a66c2] text-white hover:bg-[#084c8c];
+}
+
+.btn-secondary {
+  @apply border border-zinc-300 bg-white hover:bg-zinc-50;
+}
+
+.btn-danger {
+  @apply text-red-600 hover:bg-red-50 border border-red-200;
+}
+
+.card {
+  @apply rounded-2xl border border-zinc-200 bg-white shadow-sm;
+}
+
+.section-title {
+  @apply text-lg font-semibold tracking-tight mb-3;
+}
+
+/* Table styling */
+table.grupp-table {
+  @apply w-full border-collapse text-sm;
+}
+.grupp-table th {
+  @apply bg-zinc-100 px-2 py-2 text-left font-medium text-zinc-700 border-b border-zinc-200 sticky top-0;
+}
+.grupp-table td {
+  @apply border-b border-zinc-100 px-1.5 py-1 align-top;
+}
+.grupp-table input, .grupp-table select {
+  @apply w-full rounded border border-zinc-200 bg-white px-2 py-1 text-sm focus:border-[#0a66c2] focus:outline-none;
+}
+
+/* Mobile friendly stacked groups */
+.group-card {
+  @apply rounded-xl border border-zinc-200 bg-white p-3 mb-3;
+}
+
+/* Print styles for nice PDF output from browser */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white !important; }
+  .card, table { box-shadow: none !important; border-color: #ccc !important; }
+  .grupp-print-table { font-size: 11px; }
+  .grupp-print-table th, .grupp-print-table td { padding: 4px 6px; border: 1px solid #999; }
+  .print-header { border-bottom: 2px solid #0a66c2; padding-bottom: 8px; margin-bottom: 12px; }
 }

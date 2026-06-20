@@ -1,0 +1,16 @@
+{
+  "name": "ElGrupp - Gruppförteckningar",
+  "short_name": "ElGrupp",
+  "description": "Skapa och hantera gruppförteckningar för elcentraler",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#0a66c2",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
