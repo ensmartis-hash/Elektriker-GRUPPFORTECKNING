@@ -124,7 +124,7 @@ public/
 
 ## 📝 Licens
 
-MIT – använd fritt.
+[MIT License](LICENSE) – använd fritt.
 
 ---
 
