@@ -55,7 +55,7 @@ Perfekt att köra lokalt på datorn och nås från mobiltelefonen på samma WiFi
 
 ```bash
 # Klona repot
-git clone https://github.com/<ditt-användarnamn>/Elektriker-GRUPPFORTECKNING.git
+git clone https://github.com/ensmartis-hash/Elektriker-GRUPPFORTECKNING.git
 cd Elektriker-GRUPPFORTECKNING
 
 # Installera beroenden
@@ -127,6 +127,8 @@ public/
 MIT – använd fritt.
 
 ---
+
+**GitHub:** https://github.com/ensmartis-hash/Elektriker-GRUPPFORTECKNING
 
 Skapad utifrån kravspec från Grok-dialog:  
 https://grok.com/share/c2hhcmQtMi1jb3B5_1804eb2f-8b4d-485c-acd7-343550336fc7
